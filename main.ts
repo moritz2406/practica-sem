@@ -35,6 +35,25 @@ basic.forever(function () {
 })
 basic.forever(function () {
     while (semaforo1 == "verde" || semaforo1 == "amarillo") {
-    	
+        basic.showLeds(`
+            . . # . .
+            . # # # .
+            . . # . .
+            . # . # .
+            . # . # .
+            `)
+        basic.pause(100)
+        basic.showLeds(`
+            # . # . #
+            . # # # .
+            . . # . .
+            . # . # .
+            . # . # .
+            `)
+        basic.pause(100)
+        pins.digitalWritePin(DigitalPin.P9, 0)
+        basic.pause(100)
+        pins.digitalWritePin(DigitalPin.P9, 1)
+        basic.clearScreen()
     }
 })
