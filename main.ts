@@ -33,3 +33,8 @@ basic.forever(function () {
     pins.digitalWritePin(DigitalPin.P9, 0)
     pins.digitalWritePin(DigitalPin.P14, 0)
 })
+basic.forever(function () {
+    while (semaforo1 == "verde" || semaforo1 == "amarillo") {
+    	
+    }
+})
