@@ -51,9 +51,9 @@ basic.forever(function () {
             . # . # .
             `)
         basic.pause(100)
-        pins.digitalWritePin(DigitalPin.P9, 0)
+        pins.digitalWritePin(DigitalPin.P16, 1)
         basic.pause(100)
-        pins.digitalWritePin(DigitalPin.P9, 1)
+        pins.digitalWritePin(DigitalPin.P16, 1)
         basic.clearScreen()
     }
 })
