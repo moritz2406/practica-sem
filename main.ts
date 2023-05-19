@@ -2,9 +2,9 @@ let semaforo1 = ""
 let semaforo2 = ""
 led.enable(false)
 basic.forever(function () {
-    pins.digitalWritePin(DigitalPin.P13, 1)
-    semaforo2 = "rojo"
     pins.digitalWritePin(DigitalPin.P2, 1)
+    semaforo2 = "rojo"
+    pins.digitalWritePin(DigitalPin.P13, 1)
     semaforo1 = "verde"
     basic.pause(100)
     pins.digitalWritePin(DigitalPin.P13, 0)
