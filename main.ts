@@ -1,4 +1,4 @@
-let semaforo1 = ""
+let semaforo1 = false
 let semaforo2 = ""
 led.enable(false)
 basic.forever(function () {
@@ -18,6 +18,7 @@ basic.forever(function () {
     pins.digitalWritePin(DigitalPin.P2, 0)
     semaforo2 = "rojo"
     basic.pause(100)
+    pins.digitalWritePin(DigitalPin.P2, 0)
     pins.digitalWritePin(DigitalPin.P9, 1)
     semaforo1 = "rojo"
     pins.digitalWritePin(DigitalPin.P14, 1)
@@ -55,5 +56,10 @@ basic.forever(function () {
         basic.pause(100)
         pins.digitalWritePin(DigitalPin.P16, 1)
         basic.clearScreen()
+    }
+})
+basic.forever(function () {
+    if (semaforo1 == ("verde" == pins.digitalReadPin(DigitalPin.P0) == 0)) {
+    	
     }
 })
